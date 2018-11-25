@@ -1,0 +1,207 @@
+.wrap {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.container {
+    width: 860px;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 60px;
+    grid-template-areas: "_1 _2 _3 _3 _4 _5 _6 _7";
+
+    // @media screen and (max-width: 880px) {
+   
+    //     grid-template-columns: 4fr 1fr;
+    //     justify-content: space-between;
+    //     grid-template-areas: " _1 _2 ";
+                  
+    //     .header_image {
+    //         grid-area: _1;
+    //         background: url(../logo.jpg) no-repeat;
+    //         background-size: contain;
+    //         background-position: center;
+    //     }
+    //     a {
+    //         grid-area: _2;
+    //         background: url(../menu.svg) no-repeat;
+    //     }
+    // }
+
+    .header_image {
+        grid-area: _1;
+        background: url(../img/logo.jpg) no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    a {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-size: 12px;
+        color: black;
+
+        &:nth-child(2) {
+            grid-area: _2;
+        }
+        &:nth-child(3) {
+            grid-area: _3;
+        }
+        &:nth-child(4) {
+            grid-area: _4;
+        }
+        &:nth-child(5) {
+            grid-area: _5;
+        }
+        &:nth-child(6) {
+            grid-area: _6;
+        }
+        &:nth-child(7) {
+            grid-area: _7;
+        }
+    }
+}
+.containerCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 380px;
+    grid-template-areas: " firstBlock secondBlock"
+                          "thirdBlock fourthBlock";
+
+    
+    @media screen and (max-width: 1000px) {
+   
+        grid-template-columns: 430px;
+        justify-content: center;
+        grid-template-areas: "firstBlock"
+                             "secondBlock"
+                             "thirdBlock"
+                             "fourthBlock";
+                                
+        .cardBlock:nth-child(2) {
+            grid-area: secondBlock;
+            padding: 20px 30px;
+            box-sizing: border-box;
+            max-height: 190px;
+
+            .rightCardBlock {
+                height: 160px;
+            }
+        }
+    }
+                       
+    .cardBlock {
+        padding: 30px 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        box-sizing: border-box;
+        background: url(../img/222.jpg);
+        background-size: cover;
+        background-position: center;
+
+
+        &:nth-child(1) {
+            grid-area: firstBlock;
+        }
+        &:nth-child(2) {
+            grid-area: secondBlock;
+        }
+        &:nth-child(3) {
+            padding: 20px 30px;
+            box-sizing: border-box;
+            grid-area: thirdBlock;
+            max-height: 190px;
+
+            .rightCardBlock {
+                height: 160px;
+            }
+        }
+        &:nth-child(4) {
+            padding: 20px 30px;
+            box-sizing: border-box;
+            grid-area: fourthBlock;
+            max-height: 190px;
+
+            .rightCardBlock {
+                height: 160px;
+            }
+        }
+
+        .leftCardBlock {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+
+            .cardsName {
+                width: 140px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 5px;
+                background: #0090ff;
+            }
+        
+            h2 {
+                margin-top: 20px;
+                font-size: 24px;
+            }
+            p {
+                font-size: 12px;
+                margin: 0;
+            }
+        }
+        .rightCardBlock {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: space-between;
+        
+            .buy {
+                display: flex;
+                flex-direction: row;
+                
+                .buyCard {
+                    width: 80px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    background: #24badd;
+                    border-radius: 5px 0 0 5px;
+                }
+                
+                .buyForm {
+                    width: 0;
+                    height: 0;
+                    border-top: 20px solid transparent;
+                    border-left: 40px solid #24badd;
+                    border-bottom: 20px solid transparent;
+                }
+
+            }
+            .priceCard {
+                width: 90px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+                font-size: 24px;
+                background: yellow;
+            }
+        }
+    }
+}

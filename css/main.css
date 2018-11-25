@@ -1,0 +1,289 @@
+.wrap {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.container {
+  width: 860px;
+}
+
+.header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 4fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 4fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 60px;
+      grid-template-rows: 60px;
+      grid-template-areas: "_1 _2 _3 _3 _4 _5 _6 _7";
+}
+
+.header .header_image {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: _1;
+  background: url(../img/logo.jpg) no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.header a {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  font-size: 12px;
+  color: black;
+}
+
+.header a:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: _2;
+}
+
+.header a:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: _3;
+}
+
+.header a:nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: _4;
+}
+
+.header a:nth-child(5) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 6;
+  grid-area: _5;
+}
+
+.header a:nth-child(6) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 7;
+  grid-area: _6;
+}
+
+.header a:nth-child(7) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 8;
+  grid-area: _7;
+}
+
+.containerCard {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 380px;
+      grid-template-rows: 380px;
+      grid-template-areas: " firstBlock secondBlock" "thirdBlock fourthBlock";
+}
+
+@media screen and (max-width: 1000px) {
+  .containerCard {
+    -ms-grid-columns: 430px;
+        grid-template-columns: 430px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+        grid-template-areas: "firstBlock" "secondBlock" "thirdBlock" "fourthBlock";
+  }
+  .containerCard .cardBlock:nth-child(2) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: secondBlock;
+    padding: 20px 30px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    max-height: 190px;
+  }
+  .containerCard .cardBlock:nth-child(2) .rightCardBlock {
+    height: 160px;
+  }
+}
+
+.containerCard .cardBlock {
+  padding: 30px 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: url(../img/222.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.containerCard .cardBlock:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: firstBlock;
+}
+
+.containerCard .cardBlock:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: secondBlock;
+}
+
+.containerCard .cardBlock:nth-child(3) {
+  padding: 20px 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: thirdBlock;
+  max-height: 190px;
+}
+
+.containerCard .cardBlock:nth-child(3) .rightCardBlock {
+  height: 160px;
+}
+
+.containerCard .cardBlock:nth-child(4) {
+  padding: 20px 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: fourthBlock;
+  max-height: 190px;
+}
+
+.containerCard .cardBlock:nth-child(4) .rightCardBlock {
+  height: 160px;
+}
+
+.containerCard .cardBlock .leftCardBlock {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
+}
+
+.containerCard .cardBlock .leftCardBlock .cardsName {
+  width: 140px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+  background: #0090ff;
+}
+
+.containerCard .cardBlock .leftCardBlock h2 {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.containerCard .cardBlock .leftCardBlock p {
+  font-size: 12px;
+  margin: 0;
+}
+
+.containerCard .cardBlock .rightCardBlock {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.containerCard .cardBlock .rightCardBlock .buy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.containerCard .cardBlock .rightCardBlock .buy .buyCard {
+  width: 80px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  background: #24badd;
+  border-radius: 5px 0 0 5px;
+}
+
+.containerCard .cardBlock .rightCardBlock .buy .buyForm {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-left: 40px solid #24badd;
+  border-bottom: 20px solid transparent;
+}
+
+.containerCard .cardBlock .rightCardBlock .priceCard {
+  width: 90px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  font-size: 24px;
+  background: yellow;
+}
+/*# sourceMappingURL=main.css.map */
