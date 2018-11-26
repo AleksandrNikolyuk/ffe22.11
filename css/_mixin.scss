@@ -1,0 +1,29 @@
+
+
+@mixin media ($media) {
+    @if $media == laptops {
+        
+        @media #{$tl1024} {
+
+            grid-template-columns: 430px;
+            justify-content: center;
+            grid-template-areas: "firstBlock"
+                                 "secondBlock"
+                                 "thirdBlock"
+                                 "fourthBlock";
+                                    
+            .cardBlock:nth-child(2) {
+                grid-area: secondBlock;
+                padding: 20px 30px;
+                box-sizing: border-box;
+                max-height: 190px;
+        
+                .rightCardBlock {
+                    height: 160px;
+                }
+            }
+        }
+    } @else {
+    //   background: red;
+    }
+  }

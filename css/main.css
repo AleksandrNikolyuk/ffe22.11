@@ -93,7 +93,7 @@
       grid-template-areas: " firstBlock secondBlock" "thirdBlock fourthBlock";
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
   .containerCard {
     -ms-grid-columns: 430px;
         grid-template-columns: 430px;

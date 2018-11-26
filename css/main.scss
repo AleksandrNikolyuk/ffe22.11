@@ -1,3 +1,7 @@
+@import '../css/_variable.scss';
+@import '../css/_mixin.scss';
+
+
 .wrap {
     width: 100vw;
     display: flex;
@@ -14,24 +18,6 @@
     grid-template-rows: 60px;
     grid-template-areas: "_1 _2 _3 _3 _4 _5 _6 _7";
 
-    // @media screen and (max-width: 880px) {
-   
-    //     grid-template-columns: 4fr 1fr;
-    //     justify-content: space-between;
-    //     grid-template-areas: " _1 _2 ";
-                  
-    //     .header_image {
-    //         grid-area: _1;
-    //         background: url(../logo.jpg) no-repeat;
-    //         background-size: contain;
-    //         background-position: center;
-    //     }
-    //     a {
-    //         grid-area: _2;
-    //         background: url(../menu.svg) no-repeat;
-    //     }
-    // }
-
     .header_image {
         grid-area: _1;
         background: url(../img/logo.jpg) no-repeat;
@@ -43,7 +29,7 @@
         justify-content: center;
         align-items: center;
         text-decoration: none;
-        font-size: 12px;
+        font-size: $font-size-base;
         color: black;
 
         &:nth-child(2) {
@@ -73,28 +59,8 @@
     grid-template-areas: " firstBlock secondBlock"
                           "thirdBlock fourthBlock";
 
-    
-    @media screen and (max-width: 1000px) {
+    @include media (laptops);
    
-        grid-template-columns: 430px;
-        justify-content: center;
-        grid-template-areas: "firstBlock"
-                             "secondBlock"
-                             "thirdBlock"
-                             "fourthBlock";
-                                
-        .cardBlock:nth-child(2) {
-            grid-area: secondBlock;
-            padding: 20px 30px;
-            box-sizing: border-box;
-            max-height: 190px;
-
-            .rightCardBlock {
-                height: 160px;
-            }
-        }
-    }
-                       
     .cardBlock {
         padding: 30px 38px;
         display: flex;
@@ -153,10 +119,10 @@
         
             h2 {
                 margin-top: 20px;
-                font-size: 24px;
+                font-size: $font-size-big;
             }
             p {
-                font-size: 12px;
+                font-size: $font-size-base;
                 margin: 0;
             }
         }
@@ -199,7 +165,7 @@
                 justify-content: center;
                 align-items: center;
                 border-radius: 5px;
-                font-size: 24px;
+                font-size: $font-size-big;
                 background: yellow;
             }
         }
